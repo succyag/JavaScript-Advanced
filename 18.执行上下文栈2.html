@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--
+1. 依次输出什么？
+2. 整个过程中产生了几个执行上下文？ 5
+-->
+<script>
+    console.log('global begin: ' + i) // undefined
+    var i = 1
+    foo(1)
+    function foo (i) {
+        if (i == 4) {
+            return
+        }
+        console.log('foo() begin:' + i)
+        foo(i + 1) // 递归调用：在函数内部调用自己
+        console.log('foo() end:' + i)
+    }
+    console.log('global end: ' + i) // 1
+</script>
+</body>
+</html>
