@@ -1,4 +1,4 @@
-(function () {
+(function (window) {
     // 私有数据
     var msg = 'Succyag'
     // 操作数据的函数
@@ -9,8 +9,9 @@
         console.log('doOtherthing() ' + msg.toLowerCase())
     }
 
+    // 向外暴露对象（给外部使用的方法）
     window.myModule2 = {
         doSomething: doSomething,
         doOtherthing: doOtherthing
     }
-})()
+})(window)
