@@ -12,7 +12,19 @@
     * 问题：语句太多
 -->
 <script>
+    /*
+    一个人：name："Tom", age: 12
+    */
+    var p = new Object()
+    p.name = 'Tom'
+    p.age = 12
+    p.setName = function (name) {
+        this.name = name
+    }
 
+    // 测试
+    p.setName("Jack")
+    console.log(p.name, p.age)
 </script>
 </body>
 </html>
