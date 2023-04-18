@@ -25,6 +25,13 @@
     p.setName('Jack')
     console.log(p.name, p.age)
 
+    var p2 = { // 如果创建多个对象代码很重复
+        name: 'Bob',
+        age: 13,
+        setName: function (name) {
+            this.name = name
+        }
+    }
 </script>
 </body>
 </html>
