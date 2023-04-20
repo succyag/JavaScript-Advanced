@@ -24,11 +24,11 @@
         var number = input.value
 
         // 创建一个Worker对象
-        var worker = new Worker('worker.js')
+        var worker = new Worker('50.worker.js')
 
         // 绑定接收消息的监听
         worker.onmessage = function (event) {
-            console.log('主线程接受分线程返回的数据：' + event.data)
+            console.log('主线程接收分线程返回的数据：' + event.data)
             alert(event.data)
         }
 
@@ -38,7 +38,6 @@
 
     }
 
-    
 </script>
 </body>
 </html>
